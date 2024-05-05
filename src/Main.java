@@ -27,10 +27,42 @@ public class Main {
                 //series();
                 break;
             case 4:
-                //diamond();
+                Diamond(s);
                 break;
             default:
                 System.out.println("Choice was not on the list !");
         }
     }
+public static void Diamond(Scanner s) {
+			Scanner scanner = new Scanner(System.in);
+	        System.out.print("Enter the value of n: ");
+	        int n = scanner.nextInt();
+	        
+	        // Upper half
+	        for (int i = 1; i <= n; i++) {
+	            for (int j = 1; j <= n - i; j++) {
+	                System.out.print("  "); 
+	            }
+	            for (int k = 1; k <= 2 * i - 1; k++) {
+	                System.out.print("* ");
+	            }
+	            System.out.println(); 
+	        }
+	        
+	        // Lower half
+	        for (int i = n - 1; i >= 1; i--) {
+	            for (int j = 1; j <= n - i; j++) {
+	                System.out.print("  "); 
+	            }
+	            for (int k = 1; k <= 2 * i - 1; k++) {
+	                System.out.print("* ");
+	            }
+	            System.out.println();
+	        }
+			
+	        // time complexity T(n) = O(n * (n - 1))  or O(n^2) quadratic time
+	        // need to lower the time complexity huhu
+	        
+	        // space complexity is O(1), okie na okie
+		}  
 }
