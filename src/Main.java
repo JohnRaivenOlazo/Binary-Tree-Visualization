@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+    	LeapYear leapYear = new LeapYear();
+		Fibonacci fibo = new Fibonacci();
+		HeightComparison hcomp = new HeightComparison();
     	Scanner s = new Scanner(System.in);
     	
     	System.out.print("Enter your name: ");
@@ -13,19 +16,30 @@ public class Main {
     	System.out.println("[2] Height Comparison of 3 person");
     	System.out.println("[3] Display a series");
     	System.out.println("[4] Display a diamond of asterisk");
+    	System.out.print("Enter your choice: ");
     	
     	int options = s.nextInt();
         
         switch (options) {
-            case 1:
-                //leapYear();
-                break;
-            case 2:
-                //heightComparison();
-                break;
-            case 3:
-                //series();
-                break;
+        case 1: 
+			System.out.print("\n\nEnter a year: ");
+			int year = s.nextInt();
+			if (leapYear.isLeapYear(year)) {
+                System.out.println(year + " is a leap year");
+            } else {
+                System.out.println(year + " is not a leap year");
+            }
+			break;
+		case 2:
+			hcomp.compareHeight();
+			break;
+		case 3:
+			System.out.print("\n\nEnter n as limit: ");
+			int n = s.nextInt();
+			System.out.print("Series up to " + n + " terms:");
+			fibo.fibonacci(n);
+            break;
+			
             case 4:
                 Diamond(s);
                 break;
@@ -33,7 +47,7 @@ public class Main {
                 System.out.println("Choice was not on the list !");
         }
     }
-public static void Diamond(Scanner s) {
+    public static void Diamond(Scanner s) {
 			Scanner scanner = new Scanner(System.in);
 	        System.out.print("Enter the value of n: ");
 	        int n = scanner.nextInt();
