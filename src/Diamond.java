@@ -15,7 +15,7 @@ public class Diamond {
 	        	        System.out.print("  ");
 	        	      }
 
-	        	      // Print stars using StringBuilder for efficiency
+	        	      // Print stars using StringBuilder
 	        	      StringBuilder starsBuilder = new StringBuilder();
 	        	      for (int k = 0; k < stars; k++) {
 	        	        starsBuilder.append("* ");
