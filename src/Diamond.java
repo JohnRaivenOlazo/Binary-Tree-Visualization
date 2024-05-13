@@ -2,27 +2,26 @@ import java.util.Scanner;
 
 public class Diamond {
     public void printDiamond(Scanner s) {
-        Scanner scanner = new Scanner(System.in);
-	        System.out.print("Enter the value of n: ");
-	        int n = s.nextInt();
+       Scanner s = new Scanner(System.in);
+	        	    System.out.print("Enter the value of n: ");
+	        	    int n = s.nextInt();
 
-	        // Upper and lower half
-	        for (int i = 1; i <= 2 * n - 1; i++) {
-	            int spaces = Math.abs(n - i);
-	            int stars = 2 * n - 1 - 2 * spaces;
+	        	    for (int i = 1; i <= 2 * n - 1; i++) {
+	        	      int spaces = Math.abs(n - i);
+	        	      int stars = 2 * n - 1 - 2 * spaces;
 
-	            // Print leading spaces
-	            for (int j = 0; j < spaces; j++) {
-	                System.out.print("  ");
-	            }
+	        	      // Print spaces in a single loop
+	        	      for (int j = 0; j < spaces; j++) {
+	        	        System.out.print("  ");
+	        	      }
 
-	            // Print *
-	            for (int k = 0; k < stars; k++) {
-	                System.out.print("* ");
-	            }
-	            System.out.println();
-	        }
-	    }
+	        	      // Print stars using StringBuilder for efficiency
+	        	      StringBuilder starsBuilder = new StringBuilder();
+	        	      for (int k = 0; k < stars; k++) {
+	        	        starsBuilder.append("* ");
+	        	      }
+	        	      System.out.println(starsBuilder.toString());
+	        	    }
         // System.out.print("Enter the value of n: ");
         // int n = scanner.nextInt();
 
