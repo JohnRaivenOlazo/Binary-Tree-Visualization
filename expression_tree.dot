@@ -1,0 +1,4 @@
+digraph ExpressionTree {
+	"+" -> "3";
+	"+" -> "5";
+}
