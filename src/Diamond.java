@@ -21,6 +21,7 @@ public class Diamond {
             System.out.println();
       	    }
 	    }
+}
         // System.out.print("Enter the value of n: ");
         // int n = scanner.nextInt();
 
